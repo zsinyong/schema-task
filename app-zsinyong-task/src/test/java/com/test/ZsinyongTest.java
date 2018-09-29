@@ -15,7 +15,7 @@ public class ZsinyongTest {
 
     @Test
     public void doSchemaTaskUnit() {
-        logger.info("Starting to user schema task test unit");
+        logger.info("Starting to use schema task test unit");
         synchronized (ZsinyongTest.class) {
             try {
                 ZsinyongTest.class.wait();
