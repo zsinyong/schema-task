@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="notifyService" class="app.zsing.task.job.NotifyExamJob"></bean>
+
+    <bean id="notifyServiceInvoke" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="notifyService"/>
+        </property>
+        <property name="targetMethod">
+            <value>notifyExamTime</value>
+        </property>
+    </bean>
+
+    <bean id="notifyServiceInvokeTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="notifyServiceInvoke"></property>
+        <property name="cronExpression" value="0/2 * * * * ?"></property>
+    </bean>
+
+</beans>
