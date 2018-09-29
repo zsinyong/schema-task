@@ -5,7 +5,7 @@
     <jmxConfigurator/>
 
     <property name="LOG_HOME" value="../logs"/>
-    
+
     <property name="app_name" value="gclp-etl-service"/>
 
     <contextName>${app_name}</contextName>
@@ -107,7 +107,7 @@
     <logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG"/>
 
     <root>
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE-DEBUG"/>
         <appender-ref ref="FILE-INFO"/>

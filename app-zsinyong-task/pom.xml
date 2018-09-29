@@ -198,6 +198,12 @@
             <version>${fastjson.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>${jdbc.driver.groupId}</groupId>
+            <artifactId>${jdbc.driver.artifactId}</artifactId>
+            <version>${jdbc.driver.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -279,6 +285,10 @@
         <janino.version>2.7.8</janino.version>
         <aspectjrt.version>1.7.3</aspectjrt.version>
         <aspectjweaver.version>1.7.3</aspectjweaver.version>
+
+        <jdbc.driver.groupId>mysql</jdbc.driver.groupId>
+        <jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
+        <jdbc.driver.version>5.1.26</jdbc.driver.version>
 
         <commone.io.version>2.4</commone.io.version>
     </properties>
