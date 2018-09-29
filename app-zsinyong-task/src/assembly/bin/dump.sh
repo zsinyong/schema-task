@@ -5,8 +5,8 @@ cd ..
 DEPLOY_DIR=`pwd`
 CONF_DIR=$DEPLOY_DIR/conf
 
-SERVER_NAME=`sed '/dubbo.application.name/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
-LOGS_FILE=`sed '/dubbo.log4j.file/!d;s/.*=//' conf/dubbo.properties | tr -d '\r'`
+SERVER_NAME=`sed '/app.name/!d;s/.*=//' conf/config.properties | tr -d '\r'`
+LOGS_FILE=`sed '/app.log4j.file/!d;s/.*=//' conf/config.properties | tr -d '\r'`
 
 if [ -z "$SERVER_NAME" ]; then
 	SERVER_NAME=`hostname`

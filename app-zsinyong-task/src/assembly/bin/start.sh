@@ -1,4 +1,5 @@
 #!/bin/bash
+ENTRY_MAIN=app.zsing.task.TaskBootstrap
 cd `dirname $0`
 BIN_DIR=`pwd`
 cd ..
