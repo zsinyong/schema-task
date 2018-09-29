@@ -1,4 +1,4 @@
-package com.test;
+package app.zsinyong.task.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
