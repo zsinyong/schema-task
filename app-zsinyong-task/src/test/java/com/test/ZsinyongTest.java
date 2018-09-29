@@ -14,15 +14,14 @@ public class ZsinyongTest {
     Logger logger = LoggerFactory.getLogger(ZsinyongTest.class);
 
     @Test
-    public void readEpas() {
-        logger.info("--------------定时任务开始--------------------");
+    public void doSchemaTaskUnit() {
+        logger.info("Starting to user schema task test unit");
         synchronized (ZsinyongTest.class) {
             try {
                 ZsinyongTest.class.wait();
             } catch (Throwable e) {
-
+                logger.info("执行定时任务异常.{}", e);
             }
-
         }
     }
 }
